@@ -1,5 +1,4 @@
 syntax on
-
 set nocompatible
 filetype off                
 
@@ -59,7 +58,7 @@ call vundle#begin()
 call vundle#end()          
 filetype plugin indent on 
 
-"-------------------------------------------Editor Settings-----------------------------------------------------------
+"-------------------------------------------Editor Settings------------------------------------------------------------
 "Remove error notifs
 set noerrorbells
 "Load local vimrc
@@ -126,13 +125,18 @@ let g:ycm_language_server += [
   \     'port': 6008
   \   }
   \ ]
-let g:godot_executable = 'C:\\Users\\charl\\Documents\\Godot\\Godot.exe'
+let g:godot_executable = '\\mnt\\c\\Users\\charl\\Documents\\Godot\\Godot.exe'
 
 "-------------------------------------------Generics-------------------------------------------------------------------
 "Leader
 let mapleader = " "
 "Saving
 nnoremap <C-s> :w<Cr>
+"Normal Mode 
+inoremap <m-j><m-k> <esc>
+xnoremap <m-j><m-k> <esc>
+"Clipboard
+set clipboard+=unnamedplus
 
 "-------------------------------------------File Navigation------------------------------------------------------------
 "FZF
