@@ -3,59 +3,65 @@ set nocompatible
 filetype off                
 
 "-------------------------------------------Vim Plugins----------------------------------------------------------------
-"`:PluginInstall`
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-    "Let Vundle handle plugins"
-    Plugin 'VundleVim/Vundle.vim'
-    "File Navigation"
-    Plugin 'preservim/nerdtree'
-    Plugin 'junegunn/fzf', { 'do' : { -> fzf#install()}}
-    Plugin 'junegunn/fzf.vim'
-    Plugin 'vifm/vifm.vim'                           "File navigator
-    Plugin 'mcchrish/nnn.vim'                        "File navigator
-    "Plugin 'kien/ctrlp.vim'                          "Add Fuzzy finder
-    Plugin 'tiagofumo/vim-nerdtree-syntax-highlight' "Add Highlights and Icons to nerdtree
-    Plugin 'nvim-lua/popup.nvim'
-    Plugin 'nvim-lua/plenary.nvim'
-    Plugin 'nvim-telescope/telescope.nvim'
-    "Custom ColorScheme"
-    Plugin 'phanviet/vim-monokai-pro'
-    Plugin 'morhetz/gruvbox'                         "Full Transparent
-    Plugin 'sainnhe/gruvbox-material'                "Full Transparent
-    Plugin 'sainnhe/sonokai'
-    Plugin 'patstockwell/vim-monokai-tasty'          "Full Transparent
-    "Status Bars
-    Plugin 'vim-airline/vim-airline'                 "Add status bar
-    Plugin 'vim-airline/vim-airline-themes'
-    "Syntaxing
-    Plugin 'sheerun/vim-polyglot'
-    Plugin 'valloric/YouCompleteMe'                  "Autocomplete
-    Plugin 'scrooloose/syntastic'           
-    Plugin 'ap/vim-css-color'                        "Display color in vim
-    Plugin 'prettier/vim-prettier'
-    Plugin 'uiiaoo/java-syntax.vim'
-    "Commenting
-    Plugin 'scrooloose/nerdcommenter'
-    "Git Management
-    Plugin 'airblade/vim-gitgutter'
-    Plugin 'APZelos/blamer.nvim'
-    Plugin 'tpope/vim-fugitive'
-    "Code related stuff
-    Plugin 'majutsushi/tagbar'
-    Plugin 'mattn/emmet-vim'                         "Emmets
-    Plugin 'tpope/vim-surround'                      "Surround with characters
-    "Plugin 'neoclide/coc.nvim'                       "Nodejs
-    Plugin 'simeji/winresizer'                       "Window Resizer for VIM
-    Plugin 'Raimondi/delimitMate'
-    Plugin 'mhinz/vim-startify'
-    "Godot
-    Plugin 'habamax/vim-godot'
-    "Plugin 'hugolgst/vimsence'
-    Plugin 'andweeb/presence.nvim'
-    "Add icons
-    Plugin 'ryanoasis/vim-devicons'
-call vundle#end()          
+" `:PluginInstall`
+" set rtp+=~/.vim/bundle/Vundle.vim
+call plug#begin()
+    Plug 'ncm2/ncm2'
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+    " Let Vundle handle plugins"
+    " Plugin 'VundleVim/Vundle.vim'
+    " File Navigation"
+    Plug 'preservim/nerdtree'
+    Plug 'junegunn/fzf', { 'do' : { -> fzf#install()}}
+    Plug 'junegunn/fzf.vim'
+    Plug 'vifm/vifm.vim'                           "File navigator
+    Plug 'mcchrish/nnn.vim'                        "File navigator
+    " Plugin 'kien/ctrlp.vim'                          "Add Fuzzy finder
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "Add Highlights and Icons to nerdtree
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    " Custom ColorScheme"
+    Plug 'phanviet/vim-monokai-pro'
+    Plug 'morhetz/gruvbox'                         "Full Transparent
+    Plug 'sainnhe/gruvbox-material'                "Full Transparent
+    Plug 'sainnhe/sonokai'
+    Plug 'patstockwell/vim-monokai-tasty'          "Full Transparent
+    " Status Bars
+    Plug 'vim-airline/vim-airline'                 "Add status bar
+    Plug 'vim-airline/vim-airline-themes'
+    " kSyntaxing
+    Plug 'sheerun/vim-polyglot'
+    " Plugin 'valloric/YouCompleteMe'                  "Autocomplete
+    Plug 'scrooloose/syntastic'           
+    Plug 'ap/vim-css-color'                        "Display color in vim
+    Plug 'prettier/vim-prettier'
+    Plug 'uiiaoo/java-syntax.vim'
+    " Commenting
+    Plug 'scrooloose/nerdcommenter'
+    " Git Management
+    Plug 'airblade/vim-gitgutter'
+    Plug 'APZelos/blamer.nvim'
+    Plug 'tpope/vim-fugitive'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}                       "Nodejs
+    Plug 'simeji/winresizer'                       "Window Resizer for VIM
+    Plug 'Raimondi/delimitMate'
+    Plug 'mhinz/vim-startify'
+    " Godot
+    Plug 'habamax/vim-godot'
+    " Plugin 'hugolgst/vimsence'
+    Plug 'andweeb/presence.nvim'
+    " Add icons
+    Plug 'ryanoasis/vim-devicons'
+    " Text navigation
+    Plug 'mg979/vim-visual-multi'
+    Plug 'majutsushi/tagbar'
+    Plug 'mattn/emmet-vim'                         "Emmets
+    Plug 'tpope/vim-surround'                      "Surround with characters
+    " Plugin 'kana/vim-textobj-function'
+
+call plug#end()          
 filetype plugin indent on 
 
 "-------------------------------------------Editor Settings------------------------------------------------------------
