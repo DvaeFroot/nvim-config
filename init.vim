@@ -13,6 +13,7 @@ call plug#begin()
     " " Plugin 'VundleVim/Vundle.vim'
     " File Navigation"
     Plug 'preservim/nerdtree'
+    Plug 'junegunn/goyo.vim'
     " Plug 'junegunn/fzf', { 'do' : { -> fzf#install()}}
     " Plug 'junegunn/fzf.vim'
     " Plug 'vifm/vifm.vim'                           "File navigator
@@ -29,13 +30,16 @@ call plug#begin()
     " Plug 'sainnhe/sonokai'
     " Plug 'patstockwell/vim-monokai-tasty'          "Full Transparent
     " Status Bars
-    Plug 'vim-airline/vim-airline'                 "Add status bar
-    Plug 'vim-airline/vim-airline-themes'
+    " Plug 'vim-airline/vim-airline'                 "Add status bar
+    " Plug 'vim-airline/vim-airline-themes'
+    Plug 'itchyny/lightline.vim'
+    " Plug 'taohexxx/lighline-buffer'
+    Plug 'bling/vim-bufferline'
     " " kSyntaxing
     " Plug 'sheerun/vim-polyglot'
     " Plugin 'valloric/YouCompleteMe'                  "Autocomplete
     Plug 'scrooloose/syntastic'
-    " " Plug 'ap/vim-css-color'                        "Display color in vim
+    " Plug 'ap/vim-css-color'                        "Display color in vim
     Plug 'prettier/vim-prettier'
     " Plug 'uiiaoo/java-syntax.vim'
     " " Commenting
@@ -44,8 +48,8 @@ call plug#begin()
     Plug 'airblade/vim-gitgutter'
     Plug 'APZelos/blamer.nvim'
     Plug 'tpope/vim-fugitive'
-    " " Plug 'neoclide/coc.nvim', {'branch': 'release'}                       "Nodejs
-    " " Plug 'simeji/winresizer'                       "Window Resizer for VIM
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}                       "Nodejs
+    " Plug 'simeji/winresizer'                       "Window Resizer for VIM
     " Plug 'Raimondi/delimitMate'
     Plug 'mhinz/vim-startify'
     " " Godot
@@ -112,6 +116,7 @@ set bg=dark
 let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
 let g:airline#extensions#whitespace#enabled = 0
 " let g:airline_powerline_fonts = 1
+
 "Fix Windows Terminal Cursor when using Vim
 let &t_SI ="\e[5 q"
 let &t_SR ="\e[4 q"
@@ -119,6 +124,80 @@ let &t_EI ="\e[1 q"
 let g:ctrlp_max_files=0
 let g:ctrlp_cmd='CtrlP :pwd'
 
+"Vim Lightline
+" set hidden  " allow buffer switching without saving
+" set showtabline=2  " always show tabline
+"
+" use lightline-buffer in lightline
+" let g:lightline = {
+"     \ 'tabline': {
+"     \   'left': [ [ 'bufferinfo' ],
+"     \             [ 'separator' ],
+"     \             [ 'bufferbefore', 'buffercurrent', 'bufferafter' ], ],
+"     \   'right': [ [ 'close' ], ],
+"     \ },
+"     \ 'component_expand': {
+"     \   'buffercurrent': 'lightline#buffer#buffercurrent',
+"     \   'bufferbefore': 'lightline#buffer#bufferbefore',
+"     \   'bufferafter': 'lightline#buffer#bufferafter',
+"     \ },
+"     \ 'component_type': {
+"     \   'buffercurrent': 'tabsel',
+"     \   'bufferbefore': 'raw',
+"     \   'bufferafter': 'raw',
+"     \ },
+"     \ 'component_function': {
+"     \   'bufferinfo': 'lightline#buffer#bufferinfo',
+"     \ },
+"     \ 'component': {
+"     \   'separator': '',
+"     \ },
+"     \ }
+"
+" " remap arrow keys
+" nnoremap <Left> :bprev<CR>
+" nnoremap <Right> :bnext<CR>
+"
+" " lightline-buffer ui settings
+" " replace these symbols with ascii characters if your environment does not support unicode
+" let g:lightline_buffer_logo = ' '
+" let g:lightline_buffer_readonly_icon = ''
+" let g:lightline_buffer_modified_icon = '✭'
+" let g:lightline_buffer_git_icon = ' '
+" let g:lightline_buffer_ellipsis_icon = '..'
+" let g:lightline_buffer_expand_left_icon = '◀ '
+" let g:lightline_buffer_expand_right_icon = ' ▶'
+" let g:lightline_buffer_active_buffer_left_icon = ''
+" let g:lightline_buffer_active_buffer_right_icon = ''
+" let g:lightline_buffer_separator_icon = '  '
+"
+" " enable devicons, only support utf-8
+" " require <https://github.com/ryanoasis/vim-devicons>
+" let g:lightline_buffer_enable_devicons = 1
+"
+" " lightline-buffer function settings
+" let g:lightline_buffer_show_bufnr = 1
+"
+" " :help filename-modifiers
+" let g:lightline_buffer_fname_mod = ':t'
+"
+" " hide buffer list
+" let g:lightline_buffer_excludes = ['vimfiler']
+"
+" " max file name length
+" let g:lightline_buffer_maxflen = 30
+"
+" " max file extension length
+" let g:lightline_buffer_maxfextlen = 3
+"
+" " min file name length
+" let g:lightline_buffer_minflen = 16
+"
+" " min file extension length
+" let g:lightline_buffer_minfextlen = 3
+"
+" " reserve length for other component (e.g. info, close)
+" let g:lightline_buffer_reservelen = 20
 "-------------------------------------------Godot Settings-------------------------------------------------------------
 if !has_key( g:, 'ycm_language_server' )
   let g:ycm_language_server = []
