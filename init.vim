@@ -6,60 +6,60 @@ filetype off
 " `:PluginInstall`
 " set rtp+=~/.vim/bundle/Vundle.vim
 call plug#begin()
-    Plug 'ncm2/ncm2'
-    Plug 'SirVer/ultisnips'
-    Plug 'honza/vim-snippets'
+    " Plug 'ncm2/ncm2'
+    " Plug 'SirVer/ultisnips'
+    " Plug 'honza/vim-snippets'
     " Let Vundle handle plugins"
-    " Plugin 'VundleVim/Vundle.vim'
+    " " Plugin 'VundleVim/Vundle.vim'
     " File Navigation"
     Plug 'preservim/nerdtree'
-    Plug 'junegunn/fzf', { 'do' : { -> fzf#install()}}
-    Plug 'junegunn/fzf.vim'
-    Plug 'vifm/vifm.vim'                           "File navigator
-    Plug 'mcchrish/nnn.vim'                        "File navigator
+    " Plug 'junegunn/fzf', { 'do' : { -> fzf#install()}}
+    " Plug 'junegunn/fzf.vim'
+    " Plug 'vifm/vifm.vim'                           "File navigator
+    " Plug 'mcchrish/nnn.vim'                        "File navigator
     " Plugin 'kien/ctrlp.vim'                          "Add Fuzzy finder
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "Add Highlights and Icons to nerdtree
+    " Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "Add Highlights and Icons to nerdtree
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     " Custom ColorScheme"
-    Plug 'phanviet/vim-monokai-pro'
+    " Plug 'phanviet/vim-monokai-pro'
     Plug 'morhetz/gruvbox'                         "Full Transparent
     Plug 'sainnhe/gruvbox-material'                "Full Transparent
-    Plug 'sainnhe/sonokai'
-    Plug 'patstockwell/vim-monokai-tasty'          "Full Transparent
+    " Plug 'sainnhe/sonokai'
+    " Plug 'patstockwell/vim-monokai-tasty'          "Full Transparent
     " Status Bars
     Plug 'vim-airline/vim-airline'                 "Add status bar
     Plug 'vim-airline/vim-airline-themes'
-    " kSyntaxing
-    Plug 'sheerun/vim-polyglot'
+    " " kSyntaxing
+    " Plug 'sheerun/vim-polyglot'
     " Plugin 'valloric/YouCompleteMe'                  "Autocomplete
-    Plug 'scrooloose/syntastic'           
-    Plug 'ap/vim-css-color'                        "Display color in vim
+    Plug 'scrooloose/syntastic'
+    " " Plug 'ap/vim-css-color'                        "Display color in vim
     Plug 'prettier/vim-prettier'
-    Plug 'uiiaoo/java-syntax.vim'
-    " Commenting
+    " Plug 'uiiaoo/java-syntax.vim'
+    " " Commenting
     Plug 'scrooloose/nerdcommenter'
-    " Git Management
+    " " Git Management
     Plug 'airblade/vim-gitgutter'
     Plug 'APZelos/blamer.nvim'
     Plug 'tpope/vim-fugitive'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}                       "Nodejs
-    Plug 'simeji/winresizer'                       "Window Resizer for VIM
-    Plug 'Raimondi/delimitMate'
+    " " Plug 'neoclide/coc.nvim', {'branch': 'release'}                       "Nodejs
+    " " Plug 'simeji/winresizer'                       "Window Resizer for VIM
+    " Plug 'Raimondi/delimitMate'
     Plug 'mhinz/vim-startify'
-    " Godot
-    Plug 'habamax/vim-godot'
-    " Plugin 'hugolgst/vimsence'
-    Plug 'andweeb/presence.nvim'
-    " Add icons
+    " " Godot
+    " Plug 'habamax/vim-godot'
+    " " Plugin 'hugolgst/vimsence'
+    " Plug 'andweeb/presence.nvim'
+    " " Add icons
     Plug 'ryanoasis/vim-devicons'
-    " Text navigation
+    " " Text navigation
     Plug 'mg979/vim-visual-multi'
     Plug 'majutsushi/tagbar'
     Plug 'mattn/emmet-vim'                         "Emmets
     Plug 'tpope/vim-surround'                      "Surround with characters
-    " Plugin 'kana/vim-textobj-function'
+    " " Plugin 'kana/vim-textobj-function'
 
 call plug#end()          
 filetype plugin indent on 
@@ -68,7 +68,7 @@ filetype plugin indent on
 "Remove error notifs
 set noerrorbells
 "Load local vimrc
-set exrc
+" set exrc
 "Tabs and Indentations
 set expandtab
 set tabstop=4 "softtabstop=4
@@ -108,9 +108,10 @@ colorscheme gruvbox
 autocmd vimenter * hi normal ctermbg=NONE guibg=NONE
 "Set colorscheme theme
 set bg=dark
-autocmd vimenter * AirlineTheme powerlineish 
+"autocmd vimenter * AirlineTheme powerlineish
 let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
-let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#enabled = 0
+" let g:airline_powerline_fonts = 1
 "Fix Windows Terminal Cursor when using Vim
 let &t_SI ="\e[5 q"
 let &t_SR ="\e[4 q"
