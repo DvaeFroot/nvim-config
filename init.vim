@@ -55,7 +55,7 @@ call plug#begin()
     " " Godot
     " Plug 'habamax/vim-godot'
     " " Plugin 'hugolgst/vimsence'
-    " Plug 'andweeb/presence.nvim'
+    Plug 'andweeb/presence.nvim'
     " " Add icons
     Plug 'ryanoasis/vim-devicons'
     " " Text navigation
@@ -64,6 +64,9 @@ call plug#begin()
     Plug 'mattn/emmet-vim'                         "Emmets
     Plug 'tpope/vim-surround'                      "Surround with characters
     " " Plugin 'kana/vim-textobj-function'
+    Plug 'wfxr/minimap.vim'
+    " Plug 'severin-lemaignan/vim-minimap'
+    " Plug 'koron/minimap-vim'
 
 call plug#end()          
 filetype plugin indent on 
@@ -316,3 +319,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 " let g:ycm_autoclose_preview_window_after_insertion = 1
 "Make preview window appear at the bottom
 set splitbelow
+
+" -------------------------------------------Minimap--------------------------------------------------------------
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
