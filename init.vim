@@ -35,11 +35,11 @@ call plug#begin()
     Plug 'itchyny/lightline.vim'
     " Plug 'taohexxx/lighline-buffer'
     Plug 'bling/vim-bufferline'
-    " " kSyntaxing
-    " Plug 'sheerun/vim-polyglot'
+    " " Syntaxing
+    Plug 'sheerun/vim-polyglot'
     " Plugin 'valloric/YouCompleteMe'                  "Autocomplete
     Plug 'scrooloose/syntastic'
-    " Plug 'ap/vim-css-color'                        "Display color in vim
+    " " Plug 'ap/vim-css-color'                        "Display color in vim
     Plug 'prettier/vim-prettier'
     " Plug 'uiiaoo/java-syntax.vim'
     " " Commenting
@@ -53,7 +53,7 @@ call plug#begin()
     " Plug 'Raimondi/delimitMate'
     Plug 'mhinz/vim-startify'
     " " Godot
-    " Plug 'habamax/vim-godot'
+    Plug 'habamax/vim-godot'
     " " Plugin 'hugolgst/vimsence'
     Plug 'andweeb/presence.nvim'
     " " Add icons
