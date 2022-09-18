@@ -12,6 +12,7 @@ call plug#begin()
     " Let Vundle handle plugins"
     " " Plugin 'VundleVim/Vundle.vim'
     " File Navigation"
+    Plug 'akinsho/flutter-tools.nvim'
     Plug 'preservim/nerdtree'
     Plug 'junegunn/goyo.vim'
     " Plug 'junegunn/fzf', { 'do' : { -> fzf#install()}}
